@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <style>
+    .popupcontainer {
+        width:25%;
+        margin: 14px;
+        border-radius: 10px;
+        background-color: transparent;
+        padding: 30px;
+        z-index: 1;
+    }
+    input[type=text] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid rgb(172, 171, 171);
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=tel]{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid rgb(172, 171, 171);
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=submit]{
+        background-color: rgb(1, 185, 1);
+        color: white;
+        font-size: 20px;
+        padding: 10px 10px;
+        text-align: center;
+        margin-left: 44px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    </style>
+    <body>
+        <div class="popupcontainer" style="margin-left: 450px;" id="myform" onclick="joinasvendor()">
+            <h3 style="text-align: center;"><i class="fa-solid fa-store"></i>JOIN AS VENDOR</h3>
+            
+            <label for="name" style="font-size: 20px;">Full Name</label> <br>
+            <input type="text" id="name" name="name" placeholder="Your full name..."><br>
+            
+            <label for="mname" style="font-size: 20px;">Market Name</label><br>
+            <input type="text" id="mname" name="marketname" placeholder="Your market's name..."><br>
+            
+            <label for="location" style="font-size: 20px;">Location</label><br>
+            <input type="text" id="location" name="marketlocation" placeholder="Your market location..."><br>
+            
+            <label for="emailid" style="font-size: 20px;">Email Address</label><br>
+            <input type="text" id="email" name="emailid" placeholder="Enter your Email Id..."><br>
+            
+            <label for="phone" style="font-size: 20px;">Phone Number</label><br>
+            <input type="tel" id="phone" name="phoneno" placeholder="+123-0123456789" pattern="+[0-9]{3}-[0-9]{10}" required> <br>
+            
+            <input type="submit" value="JOIN NOW">
+            <button id="closePopup" style="width: 100px;height: 43px;margin-left: 20px; background-color: rgb(1, 185, 1);color: white;font-size: 20px;border-radius: 10px;border: none;cursor: pointer;"> CLOSE </button>
+        </div>
+    </body>
+    <script>
+        myButton.addEventListener("click",
+          function () {
+            myPopup.classList.add("show");
+          }
+        );
+        closePopup.addEventListener("click",
+          function () {
+            myPopup.classList.remove("show");
+          }
+        );
+        window.addEventListener("click",
+          function (event) {
+            if (event.target == myPopup) {
+              myPopup.classList.remove("show");
+            }
+          }
+        );
+</script>
+</html>
